@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-4.6.0-dist/css/bootstrap.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- flickity CSS -->
+    <link rel="stylesheet" href="assets/flickity-docs/flickity.css" />
+
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .gallery-cell {
+        width: 66%;
+        margin-right: 10px;
+        background: #8c8;
+        counter-increment: gallery-cell;
+      }
+    </style>
+    <!-- End flickity CSS -->
+
+    <!-- CSS -->
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      .full-height {
+        height: 100%;
+        background: #001d3d;
+      }
+
+      .row-page-1 {
+        position: absolute;
+        width: 100%;
+      }
+
+      .box-change-color {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        background-color: #fca311;
+        animation-name: box-change-color-animation;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes box-change-color-animation {
+        0% {
+          background-color: #fca311;
+        }
+        25% {
+          background-color: #b67204;
+        }
+        50% {
+          background-color: #b9a98e;
+        }
+        75% {
+          background-color: #554d40;
+        }
+        100% {
+          background-color: #fca311;
+        }
+      }
+
+      .box-length-introduction {
+        height: 65px;
+        width: 300px;
+        position: absolute;
+        background-color: #e5e5e5;
+        display: flex;
+        align-items: flex-end;
+        animation-name: box-length-animation;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+      }
+
+      @keyframes box-length-animation {
+        0% {
+          width: 300px;
+        }
+        25% {
+          width: 400px;
+        }
+        50% {
+          width: 360px;
+        }
+        75% {
+          width: 600px;
+        }
+        100% {
+          width: 300px;
+        }
+      }
+
+      .text-introduction {
+        position: fixed;
+        font-family: "Courier Prime", monospace;
+        font-size: 56px;
+      }
+
+      .text-change {
+        color: black;
+      }
+
+      .text-change::before {
+        content: "UI/UX";
+        animation: text-change-animation infinite 15s;
+        animation-delay: 2s;
+      }
+
+      @keyframes text-change-animation {
+        0% {
+          content: "UI/UX";
+        }
+        25% {
+          content: "Front-End";
+        }
+        50% {
+          content: "Back-End";
+        }
+        100% {
+          content: "Fullstack Web Dev";
+        }
+      }
+
+      .box-photo-1 {
+        height: 250px;
+        width: 200px;
+        background-color: #e5e5e5;
+        position: absolute;
+        margin-top: 5vh;
+      }
+
+      .box-photo-2 {
+        margin-top: 8vh;
+        margin-left: 2vw;
+        height: 250px;
+        width: 200px;
+        background-color: #707ce6;
+        position: relative;
+      }
+
+      .text-title-page-2 {
+        color: white;
+        font-family: Courier Prime, monospace;
+        font-size: 56px;
+        background-color: #c4c4c4;
+        left: 1500px;
+      }
+
+      .text-content-page-2 {
+        color: white;
+        font-family: Courier Prime, monospace;
+        font-size: 24px;
+        left: 1500px;
+      }
+
+      .text-content-portfolio-page-2 {
+        color: white;
+        font-family: Courier Prime, monospace;
+        font-size: 16px;
+        display: none;
+      }
+
+      .box-content-portfolio-page-2 {
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        display: none;
+      }
+
+      .text-content-social-media-page-2 {
+        color: white;
+        font-family: Courier Prime, monospace;
+        font-size: 16px;
+        display: none;
+      }
+
+      .box-content-social-media-page-2 {
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        display: none;
+      }
+
+      .box-map-page-2 {
+        left: 1500px;
+      }
+
+      .text-title-page-3 {
+        color: white;
+        font-family: Courier Prime, monospace;
+        font-size: 56px;
+        background-color: #c4c4c4;
+        left: 1500px;
+      }
+
+      .circle-skill-page-1 {
+        display: none;
+      }
+
+      .circle-skill-page-2 {
+        display: none;
+      }
+
+      .circle-skill-page-3 {
+        display: none;
+      }
+
+      .circle-content-skill-page-3 {
+        border: 1px solid white;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        color: white;
+        font-size: 56px;
+        display: none;
+      }
+
+      .box-content-skill-title-page-3 {
+        color: white;
+        font-family: Courier Prime, monospace;
+        font-size: 56px;
+        background-color: #c4c4c4;
+        left: 1500px;
+      }
+
+      .box-content-skill-text-page-3 {
+        color: white;
+        font-family: Courier Prime, monospace;
+        font-size: 56px;
+        border: 1px solid white;
+        left: 1500px;
+      }
+
+      .text-title-page-4 {
+        color: white;
+        font-family: Courier Prime, monospace;
+        font-size: 56px;
+        background-color: #c4c4c4;
+        left: 1500px;
+      }
+
+      .carousel-portofolio {
+        position: inherit;
+        left: 1500px;
+      }
+
+      .box-next {
+        height: 75px;
+        width: 75px;
+        border: 3px solid white;
+        border-radius: 50%;
+        color: white;
+      }
+
+      .box-next:hover {
+        border: 3px solid red;
+        color: red;
+      }
+
+      .box-back {
+        height: 75px;
+        width: 75px;
+        border: 3px solid white;
+        border-radius: 50%;
+        color: white;
+      }
+
+      .box-back:hover {
+        border: 3px solid red;
+        color: red;
+      }
+    </style>
+    <!-- END CSS -->
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="full-height">
+      <div class="container">
+        <!-- Page 1 -->
+        <div class="row row-page-1" style="height: 80%; width: 100%">
+          <div
+            class="col-lg-8 d-flex align-self-center"
+            style="color: white; margin-top: 25vh"
+          >
+            <div class="box-length-introduction">
+              <div class="box-change-color my-2 mx-2">
+                <div class="text-introduction mx-2">
+                  <h1>
+                    Hello, World!!!<br />
+                    I'm <b>Muhamad Munawir Amin</b><br />
+                    And I
+                    <b class="text-change"></b>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 d-flex align-self-center"
+            style="position: absolute; margin-left: 60%"
+          >
+            <div class="box-photo-1"></div>
+            <div class="box-photo-2"></div>
+          </div>
+        </div>
+        <!-- End Page 1 -->
+        <!-- Page 2 -->
+        <div class="row" style="position: fixed; width: 86%">
+          <div class="col-lg-12">
+            <div
+              class="
+                text-title-page-2
+                col-lg-3
+                mt-5
+                mb-3
+                ml-3
+                d-flex
+                justify-content-center
+              "
+            >
+              <h2>About Me</h2>
+            </div>
+            <div class="text-content-page-2 col-lg-12 d-flex">
+              <p>
+                Hallo World, my name Muhamad Munawir Amin and I full-stack web
+                developer. I’am based in Bandung, West Java, Indonesia. I’am
+                interest to technology, travel, and sport.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 mt-2 ml-3">
+            <div class="text-content-portfolio-page-2">
+              <p>Don't forget to download my portofolio</p>
+            </div>
+            <div class="mx-2 box-content-portfolio-page-2"></div>
+            <div class="mt-3 text-content-social-media-page-2">
+              <p>See also my social media</p>
+            </div>
+            <div class="d-flex">
+              <div class="mx-2 box-content-social-media-page-2"></div>
+              <div class="mx-2 box-content-social-media-page-2"></div>
+              <div class="mx-2 box-content-social-media-page-2"></div>
+              <div class="mx-2 box-content-social-media-page-2"></div>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 box-map-page-2"
+            style="height: 250px; border: 1px solid white"
+          ></div>
+        </div>
+        <!-- End Page 2 -->
+        <!-- Page 3 -->
+        <div class="row" style="position: fixed; width: 86%">
+          <div class="col-lg-12">
+            <div
+              class="
+                text-title-page-3
+                col-lg-3
+                mt-5
+                mb-3
+                ml-3
+                d-flex
+                justify-content-center
+              "
+            >
+              <h2>My Skill</h2>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 mt-4 ml-3 mr-2">
+                <div class="col-lg-12 d-flex justify-content-center">
+                  <div style="height: 150px">
+                    <div class="circle-skill-page-1">
+                      <div
+                        class="
+                          circle-content-skill-page-3
+                          d-flex
+                          justify-content-center
+                        "
+                      >
+                        <div class="align-self-center">
+                          <p>84</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-content-skill-title-page-3 col-lg-12 mt-3 mb-3">
+                  <h3>Front-End</h3>
+                </div>
+                <div
+                  class="
+                    box-content-skill-text-page-3
+                    col-lg-12
+                    mt-3
+                    mb-3
+                    pt-3
+                    pl-3
+                  "
+                >
+                  <h5>
+                    HTML<br />CSS<br />Javascript<br />Jquery<br />ReactJS
+                  </h5>
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4 mx-2">
+                <div class="col-lg-12 d-flex justify-content-center">
+                  <div style="height: 150px">
+                    <div class="circle-skill-page-2">
+                      <div
+                        class="
+                          circle-content-skill-page-3
+                          d-flex
+                          justify-content-center
+                        "
+                      >
+                        <div class="align-self-center">
+                          <p>78</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-content-skill-title-page-3 col-lg-12 mt-3 mb-3">
+                  <h3>Back-End</h3>
+                </div>
+                <div
+                  class="
+                    box-content-skill-text-page-3
+                    col-lg-12
+                    mt-3
+                    mb-3
+                    pt-3
+                    pl-3
+                  "
+                >
+                  <h5>PHP<br />Codeigniter<br />Laravel<br />NodeJS</h5>
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4 mx-2">
+                <div class="col-lg-12 d-flex justify-content-center">
+                  <div style="height: 150px">
+                    <div class="circle-skill-page-3">
+                      <div
+                        class="
+                          circle-content-skill-page-3
+                          d-flex
+                          justify-content-center
+                        "
+                      >
+                        <div class="align-self-center">
+                          <p>80</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-content-skill-title-page-3 col-lg-12 mt-3 mb-3">
+                  <h3>Other</h3>
+                </div>
+                <div
+                  class="
+                    box-content-skill-text-page-3
+                    col-lg-12
+                    mt-3
+                    mb-3
+                    pt-3
+                    pl-3
+                  "
+                >
+                  <h5>
+                    SQL<br />MySql<br />AGILE SCRUM<br />GITHUB<br />FIGMA
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Page 3 -->
+        <!-- Page 4 -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              class="
+                text-title-page-4
+                col-lg-3
+                mt-5
+                mb-3
+                ml-3
+                d-flex
+                justify-content-center
+              "
+            >
+              <h2>My Portfolio</h2>
+            </div>
+            <div class="carousel-portofolio my-5">
+              <!-- Flickity HTML init -->
+              <div
+                class="gallery js-flickity"
+                data-flickity-options='{ "freeScroll": true }'
+              >
+                <div class="gallery-cell">
+                  <img
+                    src="assets/portofolio/portal_peppd.png"
+                    alt="portal PEPPD"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="gallery-cell">
+                  <img
+                    src="assets/portofolio/lkps.png"
+                    alt="LKPS"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="gallery-cell">
+                  <img
+                    src="assets/portofolio/lkpt.png"
+                    alt="LKPT"
+                    class="img-fluid"
+                    height="350"
+                  />
+                </div>
+                <div class="gallery-cell">
+                  <img
+                    src="assets/portofolio/internasional_onboard.png"
+                    alt="LKPT"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Page 4 -->
+        <!-- Row Back/Next -->
+        <div class="row justify-content-between">
+          <div class="col-lg-3">
+            <div id="back-function-page-2" style="display: none">
+              <a>
+                <div class="box-back d-flex justify-content-center">
+                  <div class="align-self-center">
+                    <h5>BACK</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="back-function-page-3" style="display: none">
+              <a>
+                <div class="box-back d-flex justify-content-center">
+                  <div class="align-self-center">
+                    <h5>BACK</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="back-function-page-4" style="display: none">
+              <a>
+                <div class="box-back d-flex justify-content-center">
+                  <div class="align-self-center">
+                    <h5>BACK</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div id="next-function-page-1">
+              <a>
+                <div class="box-next float-right d-flex justify-content-center">
+                  <div class="align-self-center">
+                    <h5>NEXT</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="next-function-page-2" style="display: none">
+              <a>
+                <div class="box-next float-right d-flex justify-content-center">
+                  <div class="align-self-center">
+                    <h5>NEXT</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="next-function-page-3" style="display: none">
+              <a>
+                <div class="box-next float-right d-flex justify-content-center">
+                  <div class="align-self-center">
+                    <h5>NEXT</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="next-function-page-4" style="display: none">
+              <a>
+                <div class="box-next float-right d-flex justify-content-center">
+                  <div class="align-self-center">
+                    <h5>NEXT</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End Row Back/Next -->
+      </div>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- flickity.pkgd.js -->
+    <script src="assets/flickity-docs/flickity.pkgd.js"></script>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $("#next-function-page-1").click(function () {
+      //page 1
+      $(".box-photo-1").animate({ left: "-1300px" }, { duration: 800 });
+      $(".box-photo-2").animate({ left: "-1300px" }, { duration: 800 });
+      $(".box-change-color")
+        .delay(200)
+        .animate({ left: "-1000px" }, { duration: 1500 });
+      $(".box-length-introduction")
+        .delay(200)
+        .animate({ left: "-1000px" }, { duration: 1700 });
+      //page 2
+      $(".text-title-page-2")
+        .delay(200)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".text-content-page-2")
+        .delay(300)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".box-map-page-2")
+        .delay(400)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".text-content-portfolio-page-2").delay(1500).fadeIn(1000);
+      $(".box-content-portfolio-page-2").delay(1600).fadeIn(1000);
+      $(".text-content-social-media-page-2").delay(1700).fadeIn(1000);
+      $(".box-content-social-media-page-2").delay(1800).fadeIn(1000);
+      $("#next-function-page-1").hide();
+      $("#next-function-page-2").show();
+      $("#back-function-page-2").fadeIn(700);
+      // $("#back-function-page-2").show(1000);
+    });
+
+    $("#back-function-page-2").click(function () {
+      //page 1
+      $(".box-photo-1").delay(800).animate({ left: "0px" }, { duration: 800 });
+      $(".box-photo-2").delay(800).animate({ left: "0px" }, { duration: 800 });
+      $(".box-change-color")
+        .delay(900)
+        .animate({ left: "0px" }, { duration: 1200 });
+      $(".box-length-introduction")
+        .delay(900)
+        .animate({ left: "0px" }, { duration: 1500 });
+      //page 2
+      $(".text-title-page-2")
+        .delay(700)
+        .animate({ left: "1500px" }, { duration: 1000 });
+      $(".text-content-page-2")
+        .delay(600)
+        .animate({ left: "1500px" }, { duration: 1000 });
+      $(".box-map-page-2")
+        .delay(500)
+        .animate({ left: "1500px" }, { duration: 1000 });
+      $(".text-content-portfolio-page-2").delay(400).fadeOut(500);
+      $(".box-content-portfolio-page-2").delay(300).fadeOut(500);
+      $(".text-content-social-media-page-2").delay(200).fadeOut(500);
+      $(".box-content-social-media-page-2").delay(100).fadeOut(500);
+      $("#next-function-page-1").show();
+      $("#next-function-page-2").hide();
+      $("#back-function-page-2").fadeOut(400);
+    });
+
+    $("#next-function-page-2").click(function () {
+      //page 2
+      $(".text-title-page-2")
+        .delay(700)
+        .animate({ left: "-1500px" }, { duration: 1000 });
+      $(".text-content-page-2")
+        .delay(600)
+        .animate({ left: "-1500px" }, { duration: 1000 });
+      $(".box-map-page-2")
+        .delay(500)
+        .animate({ left: "-1500px" }, { duration: 1000 });
+      $(".text-content-portfolio-page-2").delay(400).fadeOut(500);
+      $(".box-content-portfolio-page-2").delay(300).fadeOut(500);
+      $(".text-content-social-media-page-2").delay(200).fadeOut(500);
+      $(".box-content-social-media-page-2").delay(100).fadeOut(500);
+      $("#next-function-page-2").hide();
+      $("#next-function-page-3").show();
+      $("#back-function-page-2").hide();
+      $("#back-function-page-3").show();
+
+      //page 3
+      $(".text-title-page-3")
+        .delay(600)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".box-content-skill-title-page-3")
+        .delay(700)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".box-content-skill-text-page-3")
+        .delay(800)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".circle-skill-page-1").delay(1800).fadeIn(1000);
+      $(".circle-skill-page-2").delay(2000).fadeIn(1000);
+      $(".circle-skill-page-3").delay(2200).fadeIn(1000);
+    });
+
+    $("#next-function-page-3").click(function () {
+      //page 3
+      $(".text-title-page-3")
+        .delay(800)
+        .animate({ left: "-1500px" }, { duration: 1000 });
+      $(".box-content-skill-title-page-3")
+        .delay(1000)
+        .animate({ left: "-1500px" }, { duration: 1000 });
+      $(".box-content-skill-text-page-3")
+        .delay(1200)
+        .animate({ left: "-1500px" }, { duration: 1000 });
+      $(".circle-skill-page-1").delay(400).fadeOut(800);
+      $(".circle-skill-page-2").delay(200).fadeOut(800);
+      $(".circle-skill-page-3").fadeOut(800);
+
+      //page 4
+      $(".text-title-page-4")
+        .delay(900)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".carousel-portofolio")
+        .delay(1000)
+        .animate({ left: "0px" }, { duration: 1000 });
+
+      $("#next-function-page-3").fadeOut(700);
+      // $("#next-function-page-4").show();
+      $("#back-function-page-3").hide();
+      $("#back-function-page-4").show();
+    });
+
+    $("#back-function-page-3").click(function () {
+      //page 2
+      $(".text-title-page-2")
+        .delay(1500)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".text-content-page-2")
+        .delay(1400)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".box-map-page-2")
+        .delay(1300)
+        .animate({ left: "0px" }, { duration: 1000 });
+      $(".text-content-portfolio-page-2").delay(2000).fadeIn(500);
+      $(".box-content-portfolio-page-2").delay(2100).fadeIn(500);
+      $(".text-content-social-media-page-2").delay(2200).fadeIn(500);
+      $(".box-content-social-media-page-2").delay(2300).fadeIn(500);
+
+      //page 3
+      $(".text-title-page-3")
+        .delay(1200)
+        .animate({ left: "1500px" }, { duration: 1000 });
+      $(".box-content-skill-title-page-3")
+        .delay(1000)
+        .animate({ left: "1500px" }, { duration: 1000 });
+      $(".box-content-skill-text-page-3")
+        .delay(800)
+        .animate({ left: "1500px" }, { duration: 1000 });
+      $(".circle-skill-page-1").delay(400).fadeOut(800);
+      $(".circle-skill-page-2").delay(200).fadeOut(800);
+      $(".circle-skill-page-3").fadeOut(800);
+
+      $("#next-function-page-2").show();
+      $("#next-function-page-3").hide();
+      $("#back-function-page-2").show();
+      $("#back-function-page-3").hide();
+    });
+
+    $("#back-function-page-4").click(function () {
+      //page 3
+      $(".text-title-page-3")
+        .delay(200)
+        .animate({ left: "0" }, { duration: 1000 });
+      $(".box-content-skill-title-page-3")
+        .delay(400)
+        .animate({ left: "0" }, { duration: 1000 });
+      $(".box-content-skill-text-page-3")
+        .delay(600)
+        .animate({ left: "0" }, { duration: 1000 });
+      $(".circle-skill-page-1").delay(1200).fadeIn(800);
+      $(".circle-skill-page-2").delay(1400).fadeIn(800);
+      $(".circle-skill-page-3").delay(1600).fadeIn(800);
+
+      //page 4
+      $(".text-title-page-4").animate({ left: "1500px" }, { duration: 1000 });
+      $(".carousel-portofolio")
+        .delay(100)
+        .animate({ left: "1500px" }, { duration: 1000 });
+
+      $("#next-function-page-3").fadeIn(700);
+      // $("#next-function-page-4").hide();
+      $("#back-function-page-3").show();
+      $("#back-function-page-4").hide();
+    });
+  });
+</script>
