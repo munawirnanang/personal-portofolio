@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    />
+
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @media only screen and (min-width: 320px) {
+        .row {
+          --bs-gutter-x: 0;
+        }
+
+        .introduction-content {
+          margin-top: 4rem;
+        }
+
+        .introduction-text > b {
+          font-size: 1.5rem;
+        }
+
+        .introduction-text > h3 {
+          font-size: 1rem;
+        }
+
+        .introduction-image-2 > img {
+          width: 40%;
+          position: absolute;
+          padding-right: 0;
+        }
+
+        .about-me-content {
+          margin-top: 22%;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .about-me-text > b {
+          font-size: 1.2rem;
+        }
+
+        .about-me-text > p {
+          font-size: 0.7rem;
+          padding-right: 15%;
+          margin-top: 7%;
+          color: black;
+        }
+
+        .about-me-map {
+          width: 83%;
+          height: 28vw;
+          background-color: grey;
+        }
+
+        .about-me-monumen-icon {
+          height: 50px;
+        }
+
+        .resume-image-1 > img {
+          padding-right: 0;
+        }
+
+        .resume-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .resume-text {
+          font-size: 1.2rem;
+        }
+
+        .resume-list {
+          margin-top: 3%;
+          padding-left: 3%;
+          padding-right: 5%;
+        }
+
+        .gallery-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .gallery-image-1 > img {
+          position: absolute;
+          z-index: -1;
+          padding-right: 0;
+        }
+
+        .gallery-text {
+          font-size: 1.2rem;
+          color: white;
+        }
+
+        .gallery-text > .d-flex {
+          margin-top: 10%;
+        }
+
+        .gallery-text > .d-flex > h2 {
+          font-size: 0.8rem;
+          color: white;
+        }
+
+        .gallery-box {
+          height: 80px;
+          background-color: grey;
+        }
+
+        .contact-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .contact-image-1 > img {
+          padding-right: 0;
+        }
+
+        .contact-text > b {
+          font-size: 1.2rem;
+        }
+
+        .contact-text > .d-flex {
+          margin-top: 2%;
+        }
+
+        .contact-text > .d-flex > h2 {
+          font-size: 1rem;
+        }
+      }
+      @media only screen and (min-width: 360px) {
+        .row {
+          --bs-gutter-x: 0;
+        }
+
+        .introduction-content {
+          margin-top: 4rem;
+        }
+
+        .introduction-text > b {
+          font-size: 1.5rem;
+        }
+
+        .introduction-text > h3 {
+          font-size: 1rem;
+        }
+
+        .introduction-image-2 > img {
+          width: 40%;
+          position: absolute;
+          padding-right: 0;
+        }
+
+        .about-me-content {
+          margin-top: 22%;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .about-me-text > b {
+          font-size: 1.2rem;
+        }
+
+        .about-me-text > p {
+          font-size: 0.7rem;
+          padding-right: 15%;
+          margin-top: 7%;
+          color: black;
+        }
+
+        .about-me-map {
+          width: 83%;
+          height: 28vw;
+          background-color: grey;
+        }
+
+        .about-me-monumen-icon {
+          height: 50px;
+        }
+
+        .resume-image-1 > img {
+          padding-right: 0;
+        }
+
+        .resume-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .resume-text {
+          font-size: 1.2rem;
+        }
+
+        .resume-list {
+          margin-top: 3%;
+          padding-left: 3%;
+          padding-right: 5%;
+        }
+
+        .gallery-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .gallery-image-1 > img {
+          position: absolute;
+          z-index: -1;
+          padding-right: 0;
+        }
+
+        .gallery-text {
+          font-size: 1.2rem;
+          color: white;
+        }
+
+        .gallery-text > .d-flex {
+          margin-top: 10%;
+        }
+
+        .gallery-text > .d-flex > h2 {
+          font-size: 0.8rem;
+          color: white;
+        }
+
+        .gallery-box {
+          height: 90px;
+          background-color: grey;
+        }
+
+        .contact-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .contact-image-1 > img {
+          padding-right: 0;
+        }
+
+        .contact-text > b {
+          font-size: 1.2rem;
+        }
+
+        .contact-text > .d-flex {
+          margin-top: 2%;
+        }
+
+        .contact-text > .d-flex > h2 {
+          font-size: 1rem;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .row {
+          --bs-gutter-x: 0;
+        }
+
+        .introduction-content {
+          margin-top: 4rem;
+        }
+
+        .introduction-text > b {
+          font-size: 3rem;
+        }
+
+        .introduction-text > h3 {
+          font-size: 2rem;
+        }
+
+        .introduction-image-1 > img {
+          width: 80%;
+        }
+
+        .introduction-image-2 > img {
+          width: 40%;
+          position: absolute;
+          padding-right: 0;
+        }
+
+        .about-me-content {
+          margin-top: 25%;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+
+        .about-me-text > b {
+          font-size: 2.5rem;
+        }
+
+        .about-me-text > p {
+          font-size: 1.2rem;
+          padding-right: 10%;
+          margin-top: 3%;
+          color: black;
+        }
+
+        .about-me-map {
+          width: 85%;
+          height: 28vw;
+          background-color: grey;
+        }
+
+        .about-me-monumen-icon {
+          height: 75px;
+        }
+
+        .resume-image-1 > img {
+          padding-right: 0;
+        }
+
+        .resume-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .resume-text {
+          font-size: 2.5rem;
+        }
+
+        .resume-list {
+          margin-top: 3%;
+          padding-left: 3%;
+          padding-right: 5%;
+        }
+
+        .gallery-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .gallery-image-1 > img {
+          position: absolute;
+          z-index: -1;
+          padding-right: 0;
+        }
+
+        .gallery-text {
+          font-size: 2.5rem;
+          color: white;
+        }
+
+        .gallery-text > .d-flex {
+          margin-top: 10%;
+        }
+
+        .gallery-text > .d-flex > h2 {
+          font-size: 2rem;
+          color: white;
+        }
+
+        .gallery-box {
+          height: 200px;
+          background-color: grey;
+        }
+
+        .contact-content {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .contact-image-1 > img {
+          padding-right: 0;
+        }
+
+        .contact-text > b {
+          font-size: 2.5rem;
+        }
+
+        .contact-text > .d-flex {
+          margin-top: 2%;
+        }
+
+        .contact-text > .d-flex > h2 {
+          font-size: 2rem;
+        }
+      }
+      @media only screen and (min-width: 1024px) {
+        .row {
+          --bs-gutter-x: 1.5rem;
+        }
+
+        .introduction-content {
+          margin-top: 4rem;
+        }
+
+        .introduction-text > b {
+          font-size: 3rem;
+        }
+
+        .introduction-text > h3 {
+          font-size: 2rem;
+        }
+
+        .introduction-image-1 > img {
+          width: 80%;
+        }
+
+        .introduction-image-2 > img {
+          width: 40%;
+          position: absolute;
+          padding-right: 0;
+        }
+
+        .about-me-content {
+          margin-top: 25%;
+        }
+
+        .about-me-text > b {
+          font-size: 2.5rem;
+        }
+
+        .about-me-text > p {
+          font-size: 1.2rem;
+          padding-right: 10%;
+          margin-top: 3%;
+          color: black;
+        }
+
+        .about-me-map {
+          width: 83%;
+          height: 28vw;
+          background-color: grey;
+        }
+
+        .about-me-monumen-icon {
+          height: 75px;
+        }
+
+        .resume-image-1 > img {
+          padding-right: 0;
+        }
+
+        .resume-text {
+          font-size: 2.5rem;
+        }
+
+        .resume-list {
+          margin-top: 3%;
+          padding-left: 3%;
+          padding-right: 5%;
+        }
+
+        .gallery-image-1 > img {
+          position: absolute;
+          z-index: -1;
+          padding-right: 0;
+        }
+
+        .gallery-text {
+          font-size: 2.5rem;
+          color: white;
+        }
+
+        .gallery-text > .d-flex {
+          margin-top: 10%;
+        }
+
+        .gallery-text > .d-flex > h2 {
+          font-size: 2rem;
+          color: white;
+        }
+
+        .gallery-box {
+          height: 200px;
+          background-color: grey;
+        }
+
+        .contact-image-1 > img {
+          padding-right: 0;
+        }
+
+        .contact-text > b {
+          font-size: 2.5rem;
+        }
+
+        .contact-text > .d-flex {
+          margin-top: 2%;
+        }
+
+        .contact-text > .d-flex > h2 {
+          font-size: 2rem;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        .row {
+          --bs-gutter-x: 1.5rem;
+        }
+
+        .introduction-content {
+          margin-top: 3rem;
+        }
+
+        .introduction-text > b {
+          font-size: 4.5rem;
+        }
+
+        .introduction-text > h3 {
+          font-size: 3rem;
+        }
+
+        .introduction-image-1 > img {
+          width: 45%;
+        }
+
+        .introduction-image-2 > img {
+          width: 50%;
+          position: absolute;
+          padding-right: 0;
+        }
+
+        .about-me-content {
+          margin-top: 35%;
+        }
+
+        .about-me-text > b {
+          font-size: 3rem;
+        }
+
+        .about-me-text > p {
+          font-size: 1.5rem;
+          padding-right: 15%;
+          margin-top: 3%;
+          color: black;
+        }
+
+        .resume-image-1 > img {
+          padding-right: 0;
+        }
+
+        .resume-text {
+          font-size: 3rem;
+        }
+
+        .resume-list {
+          margin-top: 3%;
+          padding-left: 4%;
+          padding-right: 5%;
+        }
+
+        .gallery-image-1 > img {
+          position: absolute;
+          z-index: -1;
+          padding-right: 0;
+        }
+
+        .gallery-text {
+          font-size: 3rem;
+          color: white;
+        }
+
+        .gallery-text > .d-flex {
+          margin-top: 10%;
+        }
+
+        .gallery-text > .d-flex > h2 {
+          font-size: 2rem;
+          color: white;
+        }
+
+        .gallery-box {
+          height: 250px;
+          background-color: grey;
+        }
+
+        .contact-image-1 > img {
+          padding-right: 0;
+        }
+
+        .contact-text > b {
+          font-size: 3rem;
+        }
+
+        .contact-text > .d-flex {
+          margin-top: 2%;
+        }
+
+        .contact-text > .d-flex > h2 {
+          font-size: 2rem;
+        }
+      }
+
+      .social-media {
+        width: 35px;
+        height: 35px;
+      }
+
+      section {
+        scroll-margin-top: 70px;
+      }
+
+      .form-box {
+        margin: 0 6%;
+      }
+
+      .form-box input {
+        border-radius: 20px;
+        background-color: #f0eaea;
+      }
+
+      .form-box textarea {
+        height: 200px !important;
+        border-radius: 20px;
+        background-color: #f0eaea;
+      }
+
+      .form-box button {
+        float: right;
+      }
+    </style>
+
+    <title>Hello, my name Muhamad Munawir Amin</title>
+  </head>
+  <body>
+    <div class="wrapper d-flex w-100">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header d-flex justify-content-center pt-4 pb-1">
+          <div class="img-personal border border-2 rounded-circle"></div>
+        </div>
+
+        <ul class="list-unstyled components mx-4">
+          <li
+            class="
+              introduction-menu
+              button-nav
+              border border-2
+              rounded-pill
+              text-center
+              my-2
+            "
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="INTRODUCTION"
+          >
+            <div class="icon">
+              <a href="#introduction"><i class="fa fa-home"></i></a>
+            </div>
+            <a class="link-full-sidebar" href="#introduction">INTRODUCTION</a>
+          </li>
+          <li
+            class="
+              about-me-menu
+              button-nav
+              border border-2
+              rounded-pill
+              text-center
+              my-2
+            "
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="ABOUT ME"
+          >
+            <div class="icon">
+              <a href="#about-me"><i class="fa fa-address-card"></i></a>
+            </div>
+            <a class="link-full-sidebar" href="#about-me">ABOUT ME</a>
+          </li>
+          <li
+            class="
+              resume-menu
+              button-nav
+              border border-2
+              rounded-pill
+              text-center
+              my-2
+            "
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="RESUME"
+          >
+            <div class="icon">
+              <a href="#resume"><i class="fa fa-file-alt"></i></a>
+            </div>
+            <a class="link-full-sidebar" href="#resume">RESUME</a>
+          </li>
+          <li
+            class="
+              gallery-menu
+              button-nav
+              border border-2
+              rounded-pill
+              text-center
+              my-2
+            "
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="GALLERY"
+          >
+            <div class="icon">
+              <a href="#gallery"><i class="fa fa-book"></i></a>
+            </div>
+            <a class="link-full-sidebar" href="#gallery">GALLERY</a>
+          </li>
+          <li
+            class="
+              contact-menu
+              button-nav
+              border border-2
+              rounded-pill
+              text-center
+              my-2
+            "
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="CONTACT"
+          >
+            <div class="icon">
+              <a href="#contact"><i class="fas fa-phone"></i></a>
+            </div>
+            <a class="link-full-sidebar" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+
+        <ul class="list-unstyled mx-3">
+          <li
+            class="button-nav border border-2 rounded-pill text-center my-3"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="DOWNLOAD PORTOFOLIO"
+          >
+            <div class="icon"><i class="fa fa-download"></i></div>
+            <a class="link-full-sidebar" href="#download"
+              >DOWNLOAD PORTOFOLIO</a
+            >
+          </li>
+          <div class="list-social-media d-flex justify-content-center">
+            <div
+              class="
+                border border-2
+                rounded-circle
+                text-center
+                mx-1
+                social-media
+              "
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div
+              class="
+                border border-2
+                rounded-circle
+                text-center
+                mx-1
+                social-media
+              "
+            >
+              <i class="fab fa-github"></i>
+            </div>
+            <div
+              class="
+                border border-2
+                rounded-circle
+                text-center
+                mx-1
+                social-media
+              "
+            >
+              <i class="fab fa-medium"></i>
+            </div>
+            <div
+              class="
+                border border-2
+                rounded-circle
+                text-center
+                mx-1
+                social-media
+              "
+            >
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+        </ul>
+      </nav>
+
+      <!-- Page Content -->
+      <div id="content" class="container-fluid">
+        <div>
+          <div id="nav-dekstop">
+            <nav class="navbar navbar-expand-lg">
+              <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+              </button>
+            </nav>
+          </div>
+          <div id="nav-mobile">
+            <nav
+              class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"
+            >
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon" style="color: black"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="#introduction"
+                      >INTRODUCTION</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about-me">ABOUT ME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#resume">RESUME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#gallery">GALLERY</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">CONTACT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">DOWNLOAD PORTOFOLIO</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <section
+          id="introduction"
+          class="portofolio-content introduction-content"
+        >
+          <div class="row d-flex flex-row introduction-image-1">
+            <img src="assets/ornament/introduction_1.png" />
+          </div>
+          <div class="row text-center introduction-text">
+            <b>Hello World..!</b>
+            <h3>I'am Muhamad Munawir Amin</h3>
+            <h3>And I Full Stack Developer</h3>
+          </div>
+          <div class="row d-flex flex-row-reverse introduction-image-2">
+            <img src="assets/ornament/introduction_2.png" />
+          </div>
+        </section>
+        <section id="about-me" class="portofolio-content about-me-content">
+          <div class="about-me-text">
+            <b> About Me</b>
+            <p>
+              Hallo World, my name Muhamad Munawir Amin and i full stack web
+              developer. I am based in Bandung, West Java, Indonesia. I am
+              Interest in tecnology, travel, and sport.
+            </p>
+          </div>
+          <div class="about-me-map"></div>
+          <div class="about-me-monumen-icon">
+            <img
+              src="assets/ornament/monas.png"
+              alt="monas"
+              title="monas"
+              class="mx-3 align-bottom"
+            />
+            <img
+              src="assets/ornament/gedung_sate.png"
+              alt="gedung sate"
+              title="gedung sate"
+              class="mx-3 align-bottom"
+            />
+            <img
+              src="assets/ornament/borobudur.png"
+              alt="borobudur"
+              title="borobudur"
+              class="mx-3 align-bottom"
+            />
+            <img
+              src="assets/ornament/lawang_sewu.png"
+              alt="lawang sewu"
+              title="lawang sewu"
+              class="mx-3 align-bottom"
+            />
+            <img
+              src="assets/ornament/tugu_suroboyo.png"
+              alt="tugu suroboyo"
+              title="tugu suroboyo"
+              class="mx-3 align-bottom"
+            />
+            <img
+              src="assets/ornament/garuda_wisnu.png"
+              alt="garuda wisnu"
+              title="garuda wisnu"
+              class="mx-3 align-bottom"
+            />
+            <img
+              src="assets/ornament/jembatan_ampera.png"
+              alt="jembatan ampera"
+              title="jembatan ampera"
+              class="mx-3 align-bottom"
+            />
+            <img
+              src="assets/ornament/jam_gadang.png"
+              alt="jam gadang"
+              title="jam gadang"
+              class="mx-3 align-bottom"
+            />
+          </div>
+        </section>
+        <div class="row d-flex flex-row resume-image-1">
+          <img src="assets/ornament/resume_1.png" />
+        </div>
+        <section id="resume" class="portofolio-content resume-content">
+          <div class="resume-text">
+            <b>Resume</b>
+          </div>
+          <div class="row resume-list">
+            <div class="col-12 col-lg-6">
+              <div class="card border border-2 my-1 mb-4">
+                <div class="card-body">
+                  <h4>January 2017 - Now</h4>
+                  <h3><b>Full Stack Dev</b></h3>
+                  <h4><b>Freelance</b></h4>
+                  <h5>Role :</h5>
+                  <ul>
+                    <li>
+                      As a freelace, i am helping customer to create application
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card border border-2 my-1 mb-4">
+                <div class="card-body">
+                  <h4>February 2019 - September 2019</h4>
+                  <h3><b>Full Stack Dev</b></h3>
+                  <h4><b>QA Unit - Telkom University</b></h4>
+                  <h5>Role :</h5>
+                  <ul>
+                    <li>Developing Application For University Accreditation</li>
+                    <li>
+                      Developing Application For International Accreditation
+                    </li>
+                    <li>
+                      Developing Application For Study Program Accreditation
+                    </li>
+                  </ul>
+                  <h5>Tools :</h5>
+                  <ul>
+                    <li>Editor (Sublime)</li>
+                    <li>FTP (WINFTP)</li>
+                    <li>Remote Dekstop (Teamviewer)</li>
+                  </ul>
+                  <h5>Tecnology :</h5>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS (Bootstrap)</li>
+                    <li>PHP (Codeigniter)</li>
+                    <li>Javascript (JQUERY)</li>
+                    <li>SQL (MYSQL)</li>
+                    <li>CHART (Highchart)</li>
+                    <li>Table (datatables)</li>
+                    <li>MS.WORD export (PHP to WORD)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card border border-2 my-1 mb-4">
+                <div class="card-body">
+                  <h4>January 2016 - June 2016</h4>
+                  <h3><b>Practicum assistant</b></h3>
+                  <h4>
+                    <b>School of Applied Science - Telkom University</b>
+                  </h4>
+                  <h5>Role :</h5>
+                  <ul>
+                    <li>
+                      Responsible preparing and student assistancy for study
+                      program Web Application Development
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="card border border-2 my-1 mb-4">
+                <div class="card-body">
+                  <h4>January 2021 - Now</h4>
+                  <h3><b>Full Stack Dev</b></h3>
+                  <h4><b>Dir. PEPPD - BAPPENAS</b></h4>
+                  <h5>Role :</h5>
+                  <ul>
+                    <li>Developing Application For Portal PEPPD BAPPENAS</li>
+                    <li>Developing Application For Monitoring Development</li>
+                    <li>
+                      Developing Application For Regional Development Award
+                    </li>
+                  </ul>
+                  <h5>Tools :</h5>
+                  <ul>
+                    <li>Editor (Sublime/VSCode)</li>
+                    <li>FIGMA</li>
+                    <li>GIT (GITHUB/GITLAB/BITBUCKET)</li>
+                  </ul>
+                  <h5>Tecnology :</h5>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS (Bootstrap)</li>
+                    <li>PHP (Codeigniter/Laravel)</li>
+                    <li>Javascript (JQUERY)</li>
+                    <li>SQL (MYSQL)</li>
+                    <li>GIS (Leaflet/ArcGIS)</li>
+                    <li>WYSIWYG (Summernote)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card border border-2 my-1 mb-4">
+                <div class="card-body">
+                  <h4>August 2017 - September 2018</h4>
+                  <h3><b>Laboratory assistant</b></h3>
+                  <h4>
+                    <b>School of Applied Science - Telkom University</b>
+                  </h4>
+                  <h5>Role :</h5>
+                  <ul>
+                    <li>
+                      Responsible preparing and coordinating all practicum
+                      activities including inventory & maintenance of practicum
+                      tools.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="row d-flex flex-row gallery-image-1">
+          <img src="assets/ornament/gallery_1.png" />
+        </div>
+        <section id="gallery" class="portofolio-content gallery-content">
+          <div class="gallery-text">
+            <b>Gallery</b>
+            <div class="d-flex justify-content-center">
+              <h2>Instagram | Medium | Youtube</h2>
+            </div>
+          </div>
+          <div class="d-flex mx-5 my-5">
+            <div class="col-4">
+              <div class="gallery-box card m-2 mb-3">
+                <div class="card-body">card</div>
+              </div>
+              <div class="gallery-box card m-2 mb-3">
+                <div class="card-body">card</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="gallery-box card m-2 mb-3">
+                <div class="card-body">card</div>
+              </div>
+              <div class="gallery-box card m-2 mb-3">
+                <div class="card-body">card</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="gallery-box card m-2 mb-3">
+                <div class="card-body">card</div>
+              </div>
+              <div class="gallery-box card m-2 mb-3">
+                <div class="card-body">card</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="portofolio-content contact-content">
+          <div class="contact-text mb-4">
+            <b>Contact</b>
+            <div class="d-flex justify-content-center">
+              <h2>Send me a note</h2>
+            </div>
+          </div>
+          <div class="form-box row">
+            <form>
+              <div class="mb-3">
+                <div class="row">
+                  <div class="col-12 col-lg-6 my-1 my-md-2">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInputName"
+                        placeholder="Name"
+                      />
+                      <label for="floatingInputName">Name</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6 my-1 my-md-2">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="floatingInputEmail"
+                        placeholder="name@example.com"
+                      />
+                      <label for="floatingInputEmail">Email</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 my-1 my-md-2">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        placeholder="Leave a note here"
+                        id="floatingTextarea"
+                      ></textarea>
+                      <label for="floatingTextarea">Notes</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill">
+                Submit
+              </button>
+            </form>
+          </div>
+        </section>
+        <div class="row d-flex flex-row contact-image-1">
+          <img src="assets/ornament/contact_1.png" />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Jquery ScrollSpy -->
+    <script src="assets/scrollspy.js"></script>
+
+    <script>
+      $(".portofolio-content").on("scrollSpy:enter", function () {
+        $(".button-nav").removeClass("active");
+        // console.log("enter:", $(this).attr("id"));
+        var id = $(this).attr("id");
+        $("." + id + "-menu").addClass("active");
+      });
+
+      /* $(".portofolio-content").on("scrollSpy:exit", function () {
+        console.log("exit:", $(this).attr("id"));
+      }); */
+
+      $(".portofolio-content").scrollSpy();
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(document).on("click", ".link-full-sidebar", function () {
+          if ($(this).attr("href") != "#download") {
+            $(".button-nav").removeClass("active");
+            $(this).parent().addClass("active");
+          }
+        });
+
+        $("sidebar").mCustomScrollbar({
+          theme: "minimal",
+        });
+
+        $("#sidebarCollapse").on("click", function () {
+          // open or close navbar
+          $("#sidebar, #content").toggleClass("active");
+          // close dropdown
+          $(".collapse.in").toggleClass("in");
+          // and also adjust aria-expanded attributes we use for the open/closed arrows
+          // in CSS
+          $("a[aria-expanded=true]").attr("aria-expanded", "false");
+
+          // check if id="sidebar" have class active
+          if ($("#sidebar").hasClass("active")) {
+            // if have class active then enable tooltip
+            $(".button-nav").tooltip("enable");
+          } else {
+            // if have class active then disable tooltip
+            $(".button-nav").tooltip("disable");
+          }
+        });
+
+        // Tooltip
+        var tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+        //make tooltip in button-nav class disable
+        $(".button-nav").tooltip("disable");
+        // End Tooltip
+      });
+    </script>
+  </body>
+</html>
